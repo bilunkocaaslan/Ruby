@@ -1,0 +1,6 @@
+toplam=0
+while (girdi=gets.chomp) != ""
+bolen=girdi.to_f.to_i
+toplam += 1000/bolen if bolen!=0
+end
+puts toplam

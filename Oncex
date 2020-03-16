@@ -1,0 +1,11 @@
+xlist,olist=Array.new,Array.new
+while (girdi=gets.chomp) != ""
+if girdi[0]=="x"
+    xlist.push girdi
+else
+    olist.push girdi
+end
+end
+xlist.sort!
+olist.sort!
+puts xlist+olist

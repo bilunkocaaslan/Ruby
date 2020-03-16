@@ -1,0 +1,32 @@
+# Bir sayının ters faktoryelini alan metot
+def ters_faktoryel(sayi)
+  #kodunuz bu kısma gelecek ve alttaki raise satırı silinecek
+  bolen=1
+  while sayi!=1
+  if sayi% bolen !=0
+      raise ArgumentError
+  end
+  sayi=sayi/bolen
+  bolen +=1
+  end
+  bolen -1
+end
+
+#bak ve söyle ardışıllığında belirilen adım sayısı kadar hesaplama yapan metot
+def bak_ve_soyle(baslangic, adim)
+ (1..adim).each do
+     mevcut=baslangic[0]
+     sayi=1
+     metin=""
+     (0...baslangic.size).each do |i|
+         if i==baslangic.size-1 or baslangic[i+1]!=mevcut
+             metin += sayi.to_s() +mevcut
+             sayi=0
+             mevcut=baslangic[i+1] if i<baslangic.size
+         end
+         sayi+=1
+     end
+     baslangic=metin
+ end
+ baslangic
+ end

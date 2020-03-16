@@ -1,0 +1,13 @@
+toplam=0
+sayi=gets.chomp.to_i
+(1...sayi).each{|i| toplam += i if sayi%i==0}
+=begin
+for i in 1...sayi do
+    toplam +=i if sayi%i==0
+end
+=end
+if toplam==sayi
+    puts"mükemmel"
+else
+    puts"mükemmel değil"
+end

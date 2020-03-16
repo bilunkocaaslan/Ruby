@@ -1,0 +1,9 @@
+d1=gets.chomp
+d2=gets.chomp
+if d1==d2
+    puts "berabere"
+    elsif (d1=="makas" and d2=="kağıt") or (d1=="kağıt" and d2=="taş") or (d1=="taş" and d2=="makas")
+    puts "birinci oyuncu kazandı"
+else
+    puts "ikinci oyuncu kazandı"
+end

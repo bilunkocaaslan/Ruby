@@ -1,0 +1,19 @@
+ girdi=gets.chomp.downcase
+ girdi.gsub!(",", "")
+ girdi.gsub("\\", "")
+ girdi.gsub(".", "")
+ girdi.gsub("-", " ")
+ kelimeler = girdi.split
+ 
+   sayi = Hash.new
+     kelimeler.each do |i|
+        if !sayi.include? i 
+        sayi[i] = 0
+       end
+    sayi[i] += 1
+  end
+s=sayi.sort_by{|a,k| k}
+
+  (1..5).each do |k|
+    puts "#{s[-k][0]} #{s[-k][1]}"
+end
